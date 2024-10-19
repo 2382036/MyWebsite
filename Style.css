@@ -1,0 +1,208 @@
+*
+{
+    /* to ensure proper paddings */
+    box-sizing: border-box;
+}
+html {
+    /* set a contsistent font across the website */
+    font-family: "Lucida sans", sans-serif;
+}
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* use . to rofer to a class */
+.header {
+    background-color: darkgray;
+    color: white;
+    padding: 32px;
+    text-align: center;
+}
+
+.container{
+    display: grid;
+    /* single colum layout for mobile devices */
+    grid-template-columns: 1 fr;
+    grid-gap: 20px;
+    padding: 15px;
+}
+
+/* refering to our navigation menu */
+.menu {
+    width: 20;
+    background-color: darkslateblue;
+    padding: 15px;
+}  
+.menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li{
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    box-shadow: 0 1px, 3px lightgray, gray;
+    border-radius: 3px;
+}   
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.menu li  hover {
+    background-color: skyblue; 
+}
+
+.main {
+    background-color: rgb(248, 248, 248);
+    width: 55%;
+    padding: 15px;
+}
+.registrationForm {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.registrationForm h2 {
+    text-align: center;
+    color: #424242;
+    margin-bottom: 30px;
+}
+
+.rForm-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #757575;
+}
+input[type="text"], 
+input[type="number"],
+input[type="date"], 
+input[type="tel"], 
+input[type="email"], 
+input[type="address"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+    -webkit-transition: border-color 0.2s ease;
+    -moz-transition: border-color 0.2s ease;
+    -ms-transition: border-color 0.2s ease;
+    -o-transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="address"]:focus {
+    border-color: rgb(182, 152, 182);
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: rgb(129, 111, 129);
+    color: burlywood;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: wheat;
+}
+/* styling for the footer right pane*/      
+.aside {
+    background-color: darkslateblue;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px lightgrey, gray;
+}
+.aside dl,dt,ul,li,ol{
+    text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid black;
+}
+
+.aside li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: darkgray;
+    color: darkslateblue;
+    text-align: center;
+    box-shadow: 0 1px, 3px lightgray, gray;
+    border-radius: 3px;
+}
+.aside li hover {
+    background-color: skyblue; 
+}
+
+/* styling for the footer section*/
+.footer {
+    background-color: darkgray;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 11px;
+} 
+div.pict-row{
+    margin: 5px;
+    width: 180px;
+    text-align: center;
+}
+div.pict-row:hover {
+    border: 1px solid #777;
+  }
+div.pict-row img{ 
+    width: 150px;
+    height: 110px;
+    margin: 4px;
+}
+
+
+/* styling for a mobile phone sizes */
+@media only screen and (min-width: 700px){
+     .container {
+        grid-template-columns: 1fr 2fr 1fr;
+     }
+
+     .responsive-img{
+        max-width: 680px;
+        display: flexbox;
+     }
+}
+
+.pict-row {
+    justify-content: center;
+    margin: 10px 0;
+    margin-left: 86%;
+    display:initial ;
+    flex-direction: row-reverse;
+}
+
